@@ -1,0 +1,1 @@
+import{t as o}from"./fathom-client.esm.DLbbwwbS.js";document.addEventListener("astro:page-load",()=>{document.querySelectorAll("[data-fathom='author-link']").forEach(t=>{t.addEventListener("click",()=>{const e=t.getAttribute("href");o(`guestbook: click link (${e})`)})})});

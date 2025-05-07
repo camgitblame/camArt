@@ -1,0 +1,1 @@
+import{t as r}from"./fathom-client.esm.DLbbwwbS.js";document.addEventListener("astro:page-load",()=>{document.querySelectorAll("[data-fathom='footer-link']").forEach(t=>{t.addEventListener("click",()=>{const e=t.getAttribute("href");r(`nav: click link (${e})`)})})});

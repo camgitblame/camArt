@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en" data-astro-transition-scope="astro-sojdu6wo-2">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="Astro v5.7.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#FCFCFC" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#111111"
+    />
+    <link
+      as="font"
+      crossorigin
+      rel="preload"
+      href="fonts/HEX_Franklin_v0.3_Variable.woff2"
+      type="font/woff2"
+    />
+
+    <!-- 8bit Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link
+      as="font"
+      crossorigin
+      rel="preload"
+      href="fonts/MonoLisaVariableNormal.woff2"
+      type="font/woff2"
+    />
+    <style>
+      @font-face {
+        font-style: normal;
+        font-family: "HEX Franklin";
+        font-display: swap;
+        src: url(fonts/HEX_Franklin_v0.3_Variable.woff2);
+      }
+      @font-face {
+        font-style: normal;
+        font-family: "MonoLisa";
+        font-display: swap;
+        src: url(fonts/MonoLisaVariableNormal.woff2);
+      }
+      body {
+        font-family: "HEX Franklin", "_font_fallback_567388154459", sans-serif;
+      }
+      :root {
+        --font-sans: "HEX Franklin", "_font_fallback_567388154459", sans-serif;
+      }
+      @font-face {
+        font-family: "_font_fallback_567388154459";
+        size-adjust: 106.95%;
+        src: local("Arial");
+        ascent-override: 88.83%;
+        descent-override: 18.7%;
+        line-gap-override: 0%;
+      }
+      code {
+        font-family: "MonoLisa", "_font_fallback_1517393780811", monospace;
+      }
+      :root {
+        --font-mono: "MonoLisa", "_font_fallback_1517393780811", monospace;
+      }
+      @font-face {
+        font-family: "_font_fallback_1517393780811";
+        size-adjust: 114.37%;
+        src: local("Courier New");
+        ascent-override: 92.68%;
+        descent-override: 27.98%;
+        line-gap-override: 0%
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        max-width: 700px;
+        margin: 0 auto;
+        justify-items: center;
+      }
+
+      .project {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        cursor: pointer;
+        border: 4px solid rgb(255, 255, 255); 
+      }
+
+      .project img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: opacity 0.3s ease;
+      }
+
+      
+
+      .project span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+      
+        font-weight: bold;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        text-align: center;
+        padding: 10px;
+        font-family: 'Press Start 2P', cursive;
+      }
+
+      .project:hover img {
+        opacity: 0;
+      }
+
+      .project:hover span {
+        opacity: 1;
+      }
+
+
+    </style>
+    <link rel="icon" href="favicon.svg%3Fv=4" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="favicon-light.png"
+      type="image/png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="favicon-dark.png"
+      type="image/png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="canonical" href="index.html" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Dispatches from Cam AI"
+      href="rss.xml"
+    />
+    <meta
+      name="description"
+      content="Cam is an AI artist and software engineer based in London."
+    />
+    <meta property="og:title" content="Cam Nguyen" />
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:description"
+      content="Cam is an AI artist and software engineer based in London."
+    />
+    <meta property="og:url" content="https://cam.ai/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Cam Nguyen" />
+    <meta property="og:image" content="https://eva.town/og/default.png" />
+    <meta
+      property="og:image:alt"
+      content="Cam creates AI art inspired by your pets"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="sitemap" href="sitemap-index.xml" />
+    <title>Cam Nguyen</title>
+    <meta name="astro-view-transitions-enabled" content="true" />
+    <meta name="astro-view-transitions-fallback" content="animate" />
+    <script
+      type="module"
+      src="_astro/ClientRouter.astro_astro_type_script_index_0_lang.Dg_3Ai1l.js"
+    ></script>
+    <style>
+      .astro-loading-indicator {
+        pointer-events: none;
+        background-color: var(--blue-9);
+        position: fixed;
+        z-index: 1031;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        transition: transform 300ms ease-out, opacity 150ms 150ms ease-in;
+        transform: translate3d(0, 0, 0) scaleX(var(--progress, 0));
+        transform-origin: 0;
+      }
+
+      [dir="rtl"] .astro-loading-indicator {
+        transform-origin: 100% 0;
+      }
+    </style>
+    <script>
+      (function () {
+        const className = "astro-loading-indicator";
+        const animationDuration = 300;
+        const threshold = 600;
+
+        (() => {
+          let progress = 0.25;
+          let opacity = 0;
+          /** @type {number | undefined} */
+          let trickleInterval = undefined;
+          /** @type {number | undefined} */
+          let thresholdTimeout = undefined;
+
+          const element = document.createElement("div");
+          element.classList.add(className);
+          element.ariaHidden = "true";
+
+          /** @param {typeof progress} _progress */
+          const setProgress = (_progress) => {
+            progress = _progress;
+            element.style.setProperty("--progress", String(progress));
+          };
+
+          /** @param {typeof opacity} _opacity */
+          const setOpacity = (_opacity) => {
+            opacity = _opacity;
+            element.style.setProperty("opacity", String(opacity));
+          };
+
+          setOpacity(opacity);
+
+          document.addEventListener("DOMContentLoaded", () => {
+            document.body.prepend(element);
+          });
+
+          document.addEventListener("astro:before-preparation", () => {
+            thresholdTimeout = setTimeout(() => {
+              setOpacity(1);
+              trickleInterval = window.setInterval(() => {
+                setProgress(progress + Math.random() * 0.03);
+              }, animationDuration);
+            }, threshold);
+          });
+
+          document.addEventListener("astro:before-swap", (ev) => {
+            if (!thresholdTimeout) {
+              return;
+            }
+            window.clearTimeout(thresholdTimeout);
+
+            ev.newDocument.body.prepend(element);
+            window.clearInterval(trickleInterval);
+            trickleInterval = undefined;
+
+            setProgress(1);
+            window.setTimeout(() => {
+              setOpacity(0);
+            }, animationDuration / 2);
+
+            window.setTimeout(() => {
+              setProgress(0.25);
+            }, animationDuration * 2);
+          });
+        })();
+      })();
+    </script>
+    <script
+      type="module"
+      src="_astro/UnstyledBase.astro_astro_type_script_index_0_lang.BRWMKM3M.js"
+    ></script>
+    <link rel="stylesheet" href="_astro/almost.6hwQWppq.css" />
+    <link rel="stylesheet" href="_astro/index.lbrGF7Zg.css" />
+    <script type="module" src="_astro/page.CPvyyiTs.js"></script>
+    <style>
+      [data-astro-transition-scope="astro-mm54ysol-1"] {
+        view-transition-name: astro-mm54ysol-1;
+      }
+      @layer astro {
+        ::view-transition-old(astro-mm54ysol-1) {
+          animation-duration: 0.2s;
+          animation-timing-function: ease-in;
+          animation-fill-mode: forwards;
+          animation-name: fadeOutUp;
+        }
+        ::view-transition-new(astro-mm54ysol-1) {
+          animation-duration: 0.3s;
+          animation-timing-function: ease-out;
+          animation-delay: 0.2s;
+          animation-fill-mode: backwards;
+          animation-name: fadeInUp;
+        }
+        [data-astro-transition="back"]::view-transition-old(astro-mm54ysol-1) {
+          animation-duration: 0.2s;
+          animation-timing-function: ease-in;
+          animation-fill-mode: forwards;
+          animation-name: fadeOutDown;
+        }
+        [data-astro-transition="back"]::view-transition-new(astro-mm54ysol-1) {
+          animation-duration: 0.3s;
+          animation-timing-function: ease-out;
+          animation-delay: 0.2s;
+          animation-fill-mode: backwards;
+          animation-name: fadeInDown;
+        }
+      }
+      [data-astro-transition-fallback="old"]
+        [data-astro-transition-scope="astro-mm54ysol-1"],
+      [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-mm54ysol-1"] {
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-name: fadeOutUp;
+      }
+      [data-astro-transition-fallback="new"]
+        [data-astro-transition-scope="astro-mm54ysol-1"],
+      [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-mm54ysol-1"] {
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+        animation-delay: 0.2s;
+        animation-fill-mode: backwards;
+        animation-name: fadeInUp;
+      }
+      [data-astro-transition="back"][data-astro-transition-fallback="old"]
+        [data-astro-transition-scope="astro-mm54ysol-1"],
+      [data-astro-transition="back"][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-mm54ysol-1"] {
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-name: fadeOutDown;
+      }
+      [data-astro-transition="back"][data-astro-transition-fallback="new"]
+        [data-astro-transition-scope="astro-mm54ysol-1"],
+      [data-astro-transition="back"][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-mm54ysol-1"] {
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+        animation-delay: 0.2s;
+        animation-fill-mode: backwards;
+        animation-name: fadeInDown;
+      }
+    </style>
+    <style>
+      [data-astro-transition-scope="astro-sojdu6wo-2"] {
+        view-transition-name: astro-sojdu6wo-2;
+      }
+      @layer astro {
+        ::view-transition-old(astro-sojdu6wo-2) {
+          animation: none;
+          opacity: 0;
+          mix-blend-mode: normal;
+        }
+        ::view-transition-new(astro-sojdu6wo-2) {
+          animation: none;
+          mix-blend-mode: normal;
+        }
+        ::view-transition-group(astro-sojdu6wo-2) {
+          animation: none;
+        }
+      }
+      [data-astro-transition-fallback="old"]
+        [data-astro-transition-scope="astro-sojdu6wo-2"],
+      [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-sojdu6wo-2"] {
+        animation: none;
+        mix-blend-mode: normal;
+      }
+      [data-astro-transition-fallback="new"]
+        [data-astro-transition-scope="astro-sojdu6wo-2"],
+      [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-sojdu6wo-2"] {
+        animation: none;
+        mix-blend-mode: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="scripts/preloadTheme.js"></script>
+
+    <!-- header: navigation + logo -->
+    <header data-astro-cid-2w66rqv5>
+      <div class="center" data-astro-cid-55in74kd>
+
+        <!-- <nav> → main menu, logo (<a id="logo">), theme toggle, page links. -->
+        <nav id="nav" data-astro-cid-2w66rqv5>
+          <a
+            id="logo"
+            href="index.html"
+            data-fathom="logo"
+            data-astro-transition-persist="logo"
+            data-astro-cid-gora4mgs
+          >
+            <img src="images/logo.svg" alt="Cam Nguyen Logo" style="width: 300px; height: auto;">
+              
+            </img>
+
+            
+            <span class="visuallyhidden" data-astro-cid-gora4mgs
+              >Cam Nguyen</span
+            >
+          </a>
+          <script
+            type="module"
+            src="_astro/Logo.astro_astro_type_script_index_0_lang.CMOaDQFO.js"
+          ></script>
+          <script type="module">
+            function e() {
+              const t = document.getElementById("logo");
+              t?.addEventListener("click", () => {
+                t.dataset.animating !== "true" &&
+                  ((t.dataset.animating = "true"),
+                  setTimeout(() => {
+                    t.dataset.animating = "false";
+                  }, 1300));
+              });
+            }
+            e();
+            document.addEventListener("astro:after-swap", () => e());
+          </script>
+
+
+          <!-- Page Links -->
+
+          <div class="links" data-astro-cid-2w66rqv5>
+            
+            
+            <a
+              href="portfolio.html"
+              data-fathom="nav-link"
+              class
+              data-astro-cid-2w66rqv5
+            >
+              Portfolio </a
+            >
+            
+            <a
+              href="commission.html"
+              data-fathom="nav-link"
+              class
+              data-astro-cid-2w66rqv5
+            >
+              Commission
+            </a>
+
+            <a
+              href="links.html"
+              data-fathom="nav-link"
+              class
+              data-astro-cid-2w66rqv5
+            >
+              Links
+            </a>
+            
+            
+            <a
+              href="about.html"
+              data-fathom="nav-link"
+              class
+              data-astro-cid-2w66rqv5
+            >
+              About </a
+            >
+            
+
+            
+            
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <script
+      type="module"
+      src="_astro/Header.astro_astro_type_script_index_0_lang.ayUEuaA5.js"
+    ></script>
+
+
+
+    <!-- <main> → main page content -->
+    <main
+      class="main"
+      data-astro-cid-37fxchfa
+      data-astro-transition-scope="astro-mm54ysol-1"
+    >
+      <div class="center" data-astro-cid-55in74kd>
+        <section class="home" data-astro-cid-j7pv25f6>
+          <h1 class="visuallyhidden" data-astro-cid-j7pv25f6>
+            Cam turns your furry friend into masterpieces
+          </h1>
+
+          <!-- edit intro-->
+          <div class="intro" data-astro-cid-j7pv25f6>
+            <p data-astro-cid-j7pv25f6>
+              <strong data-astro-cid-j7pv25f6
+                >
+                <a
+                  href="about.html"
+                  class="inline-link"
+                  data-astro-cid-j7pv25f6
+                  >Cam Nguyen</a
+                ></strong
+              >
+              is an AI artist creating personalized art inspired by your pets.
+              <span class="nowrap" data-astro-cid-j7pv25f6
+                >
+                <a href="commission.html"
+                class="inline-link" 
+                  >Get yours!</a
+                ></span
+              >
+            </p>
+          </div>
+
+
+          <!-------------- Project Grid -------------->
+          <div class="grid">
+            <a href="portfolio/project1.html" class="project">
+              <img src="images/thumb1.png" alt="Project 1">
+              <span>Being Cats Together</span>
+            </a>
+            <a href="portfolio/project2.html" class="project">
+              <img src="images/thumb2.png" alt="Project 2">
+              <span>Tails From The Moon</span>
+            </a>
+            <a href="portfolio/project3.html" class="project">
+              <img src="images/thumb3.png" alt="Project 3">
+              <span>Paw and Pixels</span>
+            </a>
+            <a href="portfolio/project4.html" class="project">
+              <img src="images/thumb4.png" alt="Project 4">
+              <span>Cyber Pet</span>
+            </a>
+          </div>
+
+
+        </section>
+      </div>
+    </main>
+
+    <!-- Page footer -->
+    <footer data-astro-cid-ak3upacl>
+      <div class="center" data-astro-cid-55in74kd>
+        <div class="content" data-astro-cid-ak3upacl>
+          <div class="links" data-astro-cid-ak3upacl>
+            <a
+              href="https://www.instagram.com/camArt/"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >Instagram</a
+            >
+            <a
+              href="https://bsky.app/profile/camaiart.bsky.social"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >Bluesky</a
+            >
+            <a
+              href="https://www.facebook.com/camArt/"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >Facebook</a
+            >
+            <a
+              href="mailto:camng44@gmail.com"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >Email</a
+            >
+          </div>
+
+
+          <div class="links" data-astro-cid-ak3upacl>
+            <a
+              href="https://camaiart.threadless.com/"
+              target="_blank"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >Threadless</a
+            >
+            
+            <a
+              href="https://camart.teemill.com/"
+              target="_blank"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >Teemill</a
+            >
+            <a
+              href="https://linkedin.com/in/cam.aI"
+              target="_blank"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >Open Sea</a
+            >
+
+            <a
+              href="https://github.com/camgitblame"
+              target="_blank"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >GitHub</a
+            >
+          </div>
+
+          <div class="banner" data-astro-cid-ak3upacl>
+            <span class="emoji" data-astro-cid-ak3upacl>💛</span>
+            <a
+              href="https://www.jewishvoiceforpeace.org/"
+              target="_blank"
+              data-fathom="footer-link"
+              data-astro-cid-ak3upacl
+              >Designed by Cam Nguyen 
+            </a>
+          </div>
+          <div class="subscribe" data-astro-cid-ak3upacl>
+            <style>
+              astro-island,
+              astro-slot,
+              astro-static-slot {
+                display: contents;
+              }
+            </style>
+            
+            
+            <script>
+              (() => {
+                var a = (s, i, o) => {
+                  let r = async () => {
+                      await (
+                        await s()
+                      )();
+                    },
+                    t = typeof i.value == "object" ? i.value : void 0,
+                    c = { rootMargin: t == null ? void 0 : t.rootMargin },
+                    n = new IntersectionObserver((e) => {
+                      for (let l of e)
+                        if (l.isIntersecting) {
+                          n.disconnect(), r();
+                          break;
+                        }
+                    }, c);
+                  for (let e of o.children) n.observe(e);
+                };
+                (self.Astro || (self.Astro = {})).visible = a;
+                window.dispatchEvent(new Event("astro:visible"));
+              })();
+              (() => {
+                var A = Object.defineProperty;
+                var g = (i, o, a) =>
+                  o in i
+                    ? A(i, o, {
+                        enumerable: !0,
+                        configurable: !0,
+                        writable: !0,
+                        value: a,
+                      })
+                    : (i[o] = a);
+                var d = (i, o, a) => g(i, typeof o != "symbol" ? o + "" : o, a);
+                {
+                  let i = {
+                      0: (t) => m(t),
+                      1: (t) => a(t),
+                      2: (t) => new RegExp(t),
+                      3: (t) => new Date(t),
+                      4: (t) => new Map(a(t)),
+                      5: (t) => new Set(a(t)),
+                      6: (t) => BigInt(t),
+                      7: (t) => new URL(t),
+                      8: (t) => new Uint8Array(t),
+                      9: (t) => new Uint16Array(t),
+                      10: (t) => new Uint32Array(t),
+                      11: (t) => (1 / 0) * t,
+                    },
+                    o = (t) => {
+                      let [l, e] = t;
+                      return l in i ? i[l](e) : void 0;
+                    },
+                    a = (t) => t.map(o),
+                    m = (t) =>
+                      typeof t != "object" || t === null
+                        ? t
+                        : Object.fromEntries(
+                            Object.entries(t).map(([l, e]) => [l, o(e)])
+                          );
+                  class y extends HTMLElement {
+                    constructor() {
+                      super(...arguments);
+                      d(this, "Component");
+                      d(this, "hydrator");
+                      d(this, "hydrate", async () => {
+                        var b;
+                        if (!this.hydrator || !this.isConnected) return;
+                        let e =
+                          (b = this.parentElement) == null
+                            ? void 0
+                            : b.closest("astro-island[ssr]");
+                        if (e) {
+                          e.addEventListener("astro:hydrate", this.hydrate, {
+                            once: !0,
+                          });
+                          return;
+                        }
+                        let c = this.querySelectorAll("astro-slot"),
+                          n = {},
+                          h = this.querySelectorAll(
+                            "template[data-astro-template]"
+                          );
+                        for (let r of h) {
+                          let s = r.closest(this.tagName);
+                          s != null &&
+                            s.isSameNode(this) &&
+                            ((n[
+                              r.getAttribute("data-astro-template") || "default"
+                            ] = r.innerHTML),
+                            r.remove());
+                        }
+                        for (let r of c) {
+                          let s = r.closest(this.tagName);
+                          s != null &&
+                            s.isSameNode(this) &&
+                            (n[r.getAttribute("name") || "default"] =
+                              r.innerHTML);
+                        }
+                        let p;
+                        try {
+                          p = this.hasAttribute("props")
+                            ? m(JSON.parse(this.getAttribute("props")))
+                            : {};
+                        } catch (r) {
+                          let s =
+                              this.getAttribute("component-url") || "<unknown>",
+                            v = this.getAttribute("component-export");
+                          throw (
+                            (v && (s += ` (export ${v})`),
+                            console.error(
+                              `[hydrate] Error parsing props for component ${s}`,
+                              this.getAttribute("props"),
+                              r
+                            ),
+                            r)
+                          );
+                        }
+                        let u;
+                        await this.hydrator(this)(this.Component, p, n, {
+                          client: this.getAttribute("client"),
+                        }),
+                          this.removeAttribute("ssr"),
+                          this.dispatchEvent(new CustomEvent("astro:hydrate"));
+                      });
+                      d(this, "unmount", () => {
+                        this.isConnected ||
+                          this.dispatchEvent(new CustomEvent("astro:unmount"));
+                      });
+                    }
+                    disconnectedCallback() {
+                      document.removeEventListener(
+                        "astro:after-swap",
+                        this.unmount
+                      ),
+                        document.addEventListener(
+                          "astro:after-swap",
+                          this.unmount,
+                          { once: !0 }
+                        );
+                    }
+                    connectedCallback() {
+                      if (
+                        !this.hasAttribute("await-children") ||
+                        document.readyState === "interactive" ||
+                        document.readyState === "complete"
+                      )
+                        this.childrenConnectedCallback();
+                      else {
+                        let e = () => {
+                            document.removeEventListener("DOMContentLoaded", e),
+                              c.disconnect(),
+                              this.childrenConnectedCallback();
+                          },
+                          c = new MutationObserver(() => {
+                            var n;
+                            ((n = this.lastChild) == null
+                              ? void 0
+                              : n.nodeType) === Node.COMMENT_NODE &&
+                              this.lastChild.nodeValue === "astro:end" &&
+                              (this.lastChild.remove(), e());
+                          });
+                        c.observe(this, { childList: !0 }),
+                          document.addEventListener("DOMContentLoaded", e);
+                      }
+                    }
+                    async childrenConnectedCallback() {
+                      let e = this.getAttribute("before-hydration-url");
+                      e && (await import(e)), this.start();
+                    }
+                    async start() {
+                      let e = JSON.parse(this.getAttribute("opts")),
+                        c = this.getAttribute("client");
+                      if (Astro[c] === void 0) {
+                        window.addEventListener(
+                          `astro:${c}`,
+                          () => this.start(),
+                          { once: !0 }
+                        );
+                        return;
+                      }
+                      try {
+                        await Astro[c](
+                          async () => {
+                            let n = this.getAttribute("renderer-url"),
+                              [h, { default: p }] = await Promise.all([
+                                import(this.getAttribute("component-url")),
+                                n ? import(n) : () => () => {},
+                              ]),
+                              u =
+                                this.getAttribute("component-export") ||
+                                "default";
+                            if (!u.includes(".")) this.Component = h[u];
+                            else {
+                              this.Component = h;
+                              for (let f of u.split("."))
+                                this.Component = this.Component[f];
+                            }
+                            return (this.hydrator = p), this.hydrate;
+                          },
+                          e,
+                          this
+                        );
+                      } catch (n) {
+                        console.error(
+                          `[astro-island] Error hydrating ${this.getAttribute(
+                            "component-url"
+                          )}`,
+                          n
+                        );
+                      }
+                    }
+                    attributeChangedCallback() {
+                      this.hydrate();
+                    }
+                  }
+                  d(y, "observedAttributes", ["props"]),
+                    customElements.get("astro-island") ||
+                      customElements.define("astro-island", y);
+                }
+              })();
+            </script>
+
+
+            <astro-island
+              uid="LpIol"
+              prefix="r7"
+              component-url="/_astro/SubscribeForm.BKqkshaX.js"
+              component-export="SubscribeForm"
+              renderer-url="/_astro/client.tWhYU2Ry.js"
+              props='{"data-astro-cid-ak3upacl":[0,true]}'
+              ssr
+              client="visible"
+              opts='{"name":"SubscribeForm","value":true}'
+              await-children
+              ><div class="subscribe">
+                <div class="subscribe-content">
+                  <div class="subscribe-header">
+                    <div>
+                      <h2>Subscribe</h2>
+                      <p>
+                        Sign up with your email address to receive news and updates ♥︎ 
+                      </p>
+                    </div>
+                  </div>
+                  <div class="dialogueContainer">
+                    
+                    <div class="stamp"  onclick="changeImage()"  >
+                      
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -0.5 48 48"
+                        shape-rendering="crispEdges"
+                        class="emote"
+                        style="background-color: #d9d9d9"
+                        width="48"
+                        height="48"
+                      >
+
+                        <image id="stampInnerImage"
+                        href="images/girl3.png"
+                        x="0"
+                        y="0"
+                        width="48"
+                        height="48"
+                        preserveAspectRatio="xMidYMid slice"
+                      />
+                    
+                        </svg
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="109"
+                        height="109"
+                        viewBox="0 0 109 109"
+                        fill="none"
+                        class="stamp-border"
+                      >
+                        <path
+                          d="M1.42205 6.45835L1.42188 7.81374C1.42188 8.36602 1.87473 8.80271 2.41473 8.91855C4.53983 9.3744 6.13299 11.2636 6.13299 13.5248C6.13299 15.7861 4.53983 17.6753 2.41473 18.1311C1.87473 18.247 1.42188 18.6837 1.42188 19.236V19.5915C1.42188 20.1438 1.87473 20.5805 2.41473 20.6963C4.53983 21.1522 6.13299 23.0414 6.13299 25.3026C6.13299 27.5639 4.53983 29.4531 2.41473 29.9089C1.87473 30.0248 1.42188 30.4615 1.42188 31.0137V31.3693C1.42188 31.9216 1.87473 32.3583 2.41473 32.4741C4.53983 32.93 6.13299 34.8191 6.13299 37.0804C6.13299 39.3417 4.53983 41.2309 2.41473 41.6867C1.87473 41.8025 1.42188 42.2392 1.42188 42.7915V43.1471C1.42188 43.6994 1.87473 44.136 2.41473 44.2519C4.53983 44.7077 6.13299 46.5969 6.13299 48.8582C6.13299 51.1195 4.53983 53.0086 2.41473 53.4645C1.87473 53.5803 1.42188 54.017 1.42188 54.5693V54.9249C1.42188 55.4771 1.87473 55.9138 2.41473 56.0297C4.53983 56.4855 6.13299 58.3747 6.13299 60.636C6.13299 62.8972 4.53983 64.7864 2.41473 65.2423C1.87473 65.3581 1.42188 65.7948 1.42188 66.3471V66.7026C1.42188 67.2549 1.87473 67.6916 2.41473 67.8074C4.53983 68.2633 6.13299 70.1525 6.13299 72.4137C6.13299 74.675 4.53983 76.5642 2.41473 77.02C1.87473 77.1359 1.42188 77.5726 1.42188 78.1248V78.4804C1.42188 79.0327 1.87473 79.4694 2.41473 79.5852C4.53983 80.0411 6.13299 81.9302 6.13299 84.1915C6.13299 86.4528 4.53983 88.342 2.41473 88.7978C1.87473 88.9136 1.42188 89.3503 1.42188 89.9026V90.2582C1.42188 90.8105 1.87473 91.2471 2.41473 91.363C4.53983 91.8188 6.13299 93.708 6.13299 95.9693C6.13299 98.2306 4.53983 100.12 2.41473 100.576C1.87473 100.691 1.42188 101.128 1.42188 101.68V102.036C1.42188 102.588 1.87473 103.025 2.41473 103.141C4.21974 103.528 5.64098 104.949 6.02818 106.754C6.14401 107.294 6.5807 107.747 7.13299 107.747H7.48854C8.04083 107.747 8.47751 107.294 8.59335 106.754C9.04921 104.629 10.9384 103.036 13.1997 103.036C15.4609 103.036 17.3501 104.629 17.806 106.754C17.9218 107.294 18.3585 107.747 18.9108 107.747H19.2663C19.8186 107.747 20.2553 107.294 20.3711 106.754C20.827 104.629 22.7162 103.036 24.9774 103.036C27.2387 103.036 29.1279 104.629 29.5837 106.754C29.6996 107.294 30.1363 107.747 30.6885 107.747H31.0441C31.5964 107.747 32.0331 107.294 32.1489 106.754C32.6048 104.629 34.4939 103.036 36.7552 103.036C39.0165 103.036 40.9057 104.629 41.3615 106.754C41.4774 107.294 41.914 107.747 42.4663 107.747H42.8219C43.3742 107.747 43.8108 107.294 43.9267 106.754C44.3825 104.629 46.2717 103.036 48.533 103.036C50.7943 103.036 52.6834 104.629 53.1393 106.754C53.2551 107.294 53.6918 107.747 54.2441 107.747H54.5997C55.1519 107.747 55.5886 107.294 55.7045 106.754C56.1603 104.629 58.0495 103.036 60.3108 103.036C62.572 103.036 64.4612 104.629 64.9171 106.754C65.0329 107.294 65.4696 107.747 66.0219 107.747H66.3774C66.9297 107.747 67.3664 107.294 67.4822 106.754C67.9381 104.629 69.8273 103.036 72.0885 103.036C74.3498 103.036 76.239 104.629 76.6948 106.754C76.8107 107.294 77.2474 107.747 77.7997 107.747H78.1552C78.7075 107.747 79.1442 107.294 79.26 106.754C79.7159 104.629 81.605 103.036 83.8663 103.036C86.1276 103.036 88.0168 104.629 88.4726 106.754C88.5885 107.294 89.0251 107.747 89.5774 107.747H89.933C90.4853 107.747 90.922 107.294 91.0378 106.754C91.4936 104.629 93.3828 103.036 95.6441 103.036C97.9054 103.036 99.7945 104.629 100.25 106.754C100.366 107.294 100.803 107.747 101.355 107.747H101.711C102.263 107.747 102.7 107.294 102.816 106.754C103.203 104.949 104.624 103.528 106.429 103.141C106.969 103.025 107.422 102.588 107.422 102.036V101.68C107.422 101.128 106.969 100.691 106.429 100.576C104.304 100.12 102.711 98.2306 102.711 95.9693C102.711 93.708 104.304 91.8188 106.429 91.363C106.969 91.2471 107.422 90.8105 107.422 90.2582V89.9026C107.422 89.3503 106.969 88.9136 106.429 88.7978C104.304 88.342 102.711 86.4528 102.711 84.1915C102.711 81.9302 104.304 80.0411 106.429 79.5852C106.969 79.4694 107.422 79.0327 107.422 78.4804V78.1248C107.422 77.5726 106.969 77.1359 106.429 77.02C104.304 76.5642 102.711 74.675 102.711 72.4137C102.711 70.1525 104.304 68.2633 106.429 67.8074C106.969 67.6916 107.422 67.2549 107.422 66.7026V66.3471C107.422 65.7948 106.969 65.3581 106.429 65.2423C104.304 64.7864 102.711 62.8972 102.711 60.636C102.711 58.3747 104.304 56.4855 106.429 56.0297C106.969 55.9138 107.422 55.4771 107.422 54.9249V54.5693C107.422 54.017 106.969 53.5803 106.429 53.4645C104.304 53.0086 102.711 51.1195 102.711 48.8582C102.711 46.5969 104.304 44.7077 106.429 44.2519C106.969 44.136 107.422 43.6994 107.422 43.1471V42.7915C107.422 42.2392 106.969 41.8025 106.429 41.6867C104.304 41.2309 102.711 39.3417 102.711 37.0804C102.711 34.8191 104.304 32.93 106.429 32.4741C106.969 32.3583 107.422 31.9216 107.422 31.3693V31.0137C107.422 30.4615 106.969 30.0248 106.429 29.9089C104.304 29.4531 102.711 27.5639 102.711 25.3026C102.711 23.0414 104.304 21.1522 106.429 20.6963C106.969 20.5805 107.422 20.1438 107.422 19.5915V19.236C107.422 18.6837 106.969 18.247 106.429 18.1311C104.304 17.6753 102.711 15.7861 102.711 13.5248C102.711 11.2636 104.304 9.3744 106.429 8.91855C106.969 8.80271 107.422 8.36602 107.422 7.81374V7.45818C107.422 6.9059 106.969 6.46921 106.429 6.35337C104.624 5.96618 103.203 4.54493 102.816 2.73992C102.7 2.19992 102.263 1.74707 101.711 1.74707H101.355C100.803 1.74707 100.366 2.19992 100.25 2.73992C99.7945 4.86503 97.9054 6.45818 95.6441 6.45818C93.3828 6.45818 91.4936 4.86503 91.0378 2.73992C90.922 2.19992 90.4853 1.74707 89.933 1.74707H89.5774C89.0251 1.74707 88.5885 2.19992 88.4726 2.73992C88.0168 4.86503 86.1276 6.45818 83.8663 6.45818C81.605 6.45818 79.7159 4.86503 79.26 2.73992C79.1442 2.19992 78.7075 1.74707 78.1552 1.74707H77.7997C77.2474 1.74707 76.8107 2.19992 76.6948 2.73992C76.239 4.86503 74.3498 6.45818 72.0885 6.45818C69.8273 6.45818 67.9381 4.86503 67.4822 2.73992C67.3664 2.19992 66.9297 1.74707 66.3774 1.74707H66.0219C65.4696 1.74707 65.0329 2.19992 64.9171 2.73992C64.4612 4.86503 62.572 6.45818 60.3108 6.45818C58.0495 6.45818 56.1603 4.86503 55.7045 2.73992C55.5886 2.19992 55.1519 1.74707 54.5997 1.74707H54.2441C53.6918 1.74707 53.2551 2.19992 53.1393 2.73992C52.6834 4.86503 50.7943 6.45818 48.533 6.45818C46.2717 6.45818 44.3825 4.86503 43.9267 2.73992C43.8108 2.19992 43.3742 1.74707 42.8219 1.74707H42.4663C41.914 1.74707 41.4774 2.19992 41.3615 2.73992C40.9057 4.86503 39.0165 6.45818 36.7552 6.45818C34.4939 6.45818 32.6048 4.86503 32.1489 2.73992C32.0331 2.19992 31.5964 1.74707 31.0441 1.74707H30.6885C30.1363 1.74707 29.6996 2.19992 29.5837 2.73992C29.1279 4.86503 27.2387 6.45818 24.9774 6.45818C22.7162 6.45818 20.827 4.86503 20.3711 2.73992C20.2553 2.19992 19.8186 1.74707 19.2663 1.74707H18.9108C18.3585 1.74707 17.9218 2.19992 17.806 2.73992C17.3501 4.86503 15.4609 6.45818 13.1997 6.45818C10.9384 6.45818 9.04921 4.86503 8.59335 2.73992C8.47751 2.19992 8.04083 1.74707 7.48854 1.74707L6.13316 1.74724M1.42205 6.45835C4.02392 6.45835 6.13316 4.34912 6.13316 1.74724M1.42205 6.45835C1.42205 6.45826 1.42195 6.45835 1.42205 6.45835ZM6.13316 1.74724C6.13316 1.74715 6.13306 1.74724 6.13316 1.74724Z"
+                        ></path>
+                      </svg>
+                    </div>
+
+                    <script>
+                      const images = ['images/girl3.png', 'images/girl3_2.png', 'images/girl3_3.png'];
+                      let currentIndex = 0;
+
+                      function changeImage() {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        document.getElementById('stampInnerImage').setAttribute('href', images[currentIndex]);
+                      }
+                    </script>
+
+
+                  </div>
+                </div>
+                
+                <!-- # Subscribe Form -->
+                <form>
+                  <div class="inputWrapper" aria-disabled="false">
+                    <input
+                      aria-label="Your email"
+                      class="input"
+                      type="email"
+                      id="email"
+                      placeholder="Your email"
+                      name="email"
+                      value=""
+                    /><button
+                      type="submit"
+                      class="iconButton"
+                      aria-label="Subscribe"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        width="24"
+                        height="24"
+                        class="icon"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M22 13H20V7.23792L12.0718 14.338L4 7.21594V19H14V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V13ZM4.51146 5L12.0619 11.662L19.501 5H4.51146ZM21 18H24V20H21V23H19V20H16V18H19V15H21V18Z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!--astro:end--></astro-island
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="_astro/Footer.astro_astro_type_script_index_0_lang.CcE8sv4F.js"
+    ></script>
+    <script>
+      (() => {
+        var l = (n, t) => {
+          let i = async () => {
+              await (
+                await n()
+              )();
+            },
+            e = typeof t.value == "object" ? t.value : void 0,
+            s = { timeout: e == null ? void 0 : e.timeout };
+          "requestIdleCallback" in window
+            ? window.requestIdleCallback(i, s)
+            : setTimeout(i, s.timeout || 200);
+        };
+        (self.Astro || (self.Astro = {})).idle = l;
+        window.dispatchEvent(new Event("astro:idle"));
+      })();
+    </script>
+    <astro-island
+      uid="18dfbv"
+      prefix="r4"
+      component-url="/_astro/Stickers.c-nxrskj.js"
+      component-export="Stickers"
+      renderer-url="/_astro/client.tWhYU2Ry.js"
+      props='{"data-astro-transition-persist":[0,"stickers"],"data-astro-cid-37fxchfa":[0,true]}'
+      ssr
+      client="idle"
+      opts='{"name":"Stickers","value":true}'
+      data-astro-transition-persist="stickers"
+      await-children
+      ><div class="stickers" style="view-transition-name: stickers"></div>
+      <!--astro:end--></astro-island
+    >
+  </body>
+</html>
+<script
+  type="module"
+  src="_astro/index.astro_astro_type_script_index_0_lang.Dw8BcZ08.js"
+></script>
