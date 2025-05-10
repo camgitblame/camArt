@@ -1,1 +1,0 @@
-import{t as e}from"./fathom-client.esm.DLbbwwbS.js";document.addEventListener("astro:page-load",()=>{document.querySelector("[data-fathom='explanation']")?.addEventListener("click",()=>{e("guestbook: learn more")})});
