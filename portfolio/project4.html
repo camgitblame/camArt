@@ -15,17 +15,14 @@
       as="font"
       crossorigin
       rel="preload"
-      href="fonts/HEX_Franklin_v0.3_Variable.woff2"
+      href="../fonts/HEX_Franklin_v0.3_Variable.woff2"
       type="font/woff2"
     />
-
-    <!-- 8bit Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link
       as="font"
       crossorigin
       rel="preload"
-      href="fonts/MonoLisaVariableNormal.woff2"
+      href="../fonts/MonoLisaVariableNormal.woff2"
       type="font/woff2"
     />
     <style>
@@ -33,22 +30,22 @@
         font-style: normal;
         font-family: "HEX Franklin";
         font-display: swap;
-        src: url(fonts/HEX_Franklin_v0.3_Variable.woff2);
+        src: url(../fonts/HEX_Franklin_v0.3_Variable.woff2);
       }
       @font-face {
         font-style: normal;
         font-family: "MonoLisa";
         font-display: swap;
-        src: url(fonts/MonoLisaVariableNormal.woff2);
+        src: url(../fonts/MonoLisaVariableNormal.woff2);
       }
       body {
-        font-family: "HEX Franklin", "_font_fallback_567388154459", sans-serif;
+        font-family: "HEX Franklin", "_font_fallback_1462724864772", sans-serif;
       }
       :root {
-        --font-sans: "HEX Franklin", "_font_fallback_567388154459", sans-serif;
+        --font-sans: "HEX Franklin", "_font_fallback_1462724864772", sans-serif;
       }
       @font-face {
-        font-family: "_font_fallback_567388154459";
+        font-family: "_font_fallback_1462724864772";
         size-adjust: 106.95%;
         src: local("Arial");
         ascent-override: 88.83%;
@@ -56,127 +53,71 @@
         line-gap-override: 0%;
       }
       code {
-        font-family: "MonoLisa", "_font_fallback_1517393780811", monospace;
+        font-family: "MonoLisa", "_font_fallback_500021454214", monospace;
       }
       :root {
-        --font-mono: "MonoLisa", "_font_fallback_1517393780811", monospace;
+        --font-mono: "MonoLisa", "_font_fallback_500021454214", monospace;
       }
       @font-face {
-        font-family: "_font_fallback_1517393780811";
+        font-family: "_font_fallback_500021454214";
         size-adjust: 114.37%;
         src: local("Courier New");
         ascent-override: 92.68%;
         descent-override: 27.98%;
-        line-gap-override: 0%
+        line-gap-override: 0%;
       }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
-        max-width: 700px;
-        margin: 0 auto;
-        justify-items: center;
-      }
-
-      .project {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        cursor: pointer;
-        border: 4px solid rgb(255, 255, 255); 
-      }
-
-      .project img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 12px;
-        transition: opacity 0.3s ease;
-      }
-
-      
-
-      .project span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1.2rem;
-      
-        font-weight: bold;
-        color: #fff;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        text-align: center;
-        padding: 10px;
-        font-family: 'Press Start 2P', cursive;
-      }
-
-      .project:hover img {
-        opacity: 0;
-      }
-
-      .project:hover span {
-        opacity: 1;
-      }
-
-
     </style>
-
-
-    <link rel="icon" href="favicon.svg%3Fv=4" type="image/svg+xml" />
+    <link rel="icon" href="../favicon.svg%3Fv=4" type="image/svg+xml" />
     <link
       rel="icon"
-      href="favicon-light.png"
+      href="../favicon-light.png"
       type="image/png"
       media="(prefers-color-scheme: light)"
     />
     <link
       rel="icon"
-      href="favicon-dark.png"
+      href="../favicon-dark.png"
       type="image/png"
       media="(prefers-color-scheme: dark)"
     />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="canonical" href="index.html" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <link rel="canonical" href="project2.html" />
     <link
       rel="alternate"
       type="application/rss+xml"
-      title="Dispatches from Cam AI"
-      href="rss.xml"
+      title="Dispatches from Cam Art"
+      href="../rss.xml"
     />
     <meta
       name="description"
-      content="Cam is an AI artist and software engineer based in London."
+      content="Traveling to Mars with your furry friends."
     />
-    <meta property="og:title" content="Cam Nguyen" />
+    <meta property="og:title" content="Tails From The Moon" />
     <meta property="og:type" content="website" />
-
     <meta
       property="og:description"
-      content="Cam is an AI artist and software engineer based in London."
+      content="Tails From The Moon"
     />
-    <meta property="og:url" content="https://cam.ai/" />
+    <meta
+      property="og:url"
+      content="https://camaiart.netlify.app/portfolio/project2.html"
+    />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Cam Nguyen" />
-    <meta property="og:image" content="https://eva.town/og/default.png" />
+    <meta property="og:image" content="/_astro/guestbook-cover.CYV3-3y5.png" />
     <meta
       property="og:image:alt"
-      content="Cam creates AI art inspired by your pets"
+      content="Cam designs and builds things for the web."
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="sitemap" href="sitemap-index.xml" />
-    <title>Cam Nguyen</title>
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="sitemap" href="../sitemap-index.xml" />
+    <title>Cam Nguyen </title>
     <meta name="astro-view-transitions-enabled" content="true" />
     <meta name="astro-view-transitions-fallback" content="animate" />
     <script
       type="module"
-      src="_astro/ClientRouter.astro_astro_type_script_index_0_lang.Dg_3Ai1l.js"
+      src="../_astro/ClientRouter.astro_astro_type_script_index_0_lang.Dg_3Ai1l.js"
     ></script>
     <style>
       .astro-loading-indicator {
@@ -266,13 +207,141 @@
     </script>
     <script
       type="module"
-      src="_astro/UnstyledBase.astro_astro_type_script_index_0_lang.BRWMKM3M.js"
+      src="../_astro/UnstyledBase.astro_astro_type_script_index_0_lang.BRWMKM3M.js"
     ></script>
-    <link rel="stylesheet" href="_astro/almost.6hwQWppq.css" />
-    <link rel="stylesheet" href="_astro/index.lbrGF7Zg.css" />
-    <script type="module" src="_astro/page.CPvyyiTs.js"></script>
-
-
+    <link rel="stylesheet" href="../_astro/_id_.BdOAM8js.css" />
+    <style>
+      @charset "UTF-8";
+      .pagination[data-astro-cid-lvjzyg5v] {
+        display: flex;
+        flex-direction: column;
+        margin-block-start: var(--space-3xl);
+        margin-inline: auto;
+        width: min(800px, 100% - var(--space-xl) * 2);
+        gap: var(--space-m);
+      }
+      .pagination[data-astro-cid-lvjzyg5v] a[data-astro-cid-lvjzyg5v] {
+        flex: 1;
+        display: grid;
+        -moz-column-gap: var(--space-m);
+        column-gap: var(--space-m);
+        padding: var(--space-m);
+        border-radius: var(--radius-m);
+        border: 1px solid var(--gray-5);
+        line-height: 1.1;
+        align-items: center;
+        text-decoration: none;
+        transition: background-color 0.2s ease-in-out,
+          border-color 0.2s ease-in-out;
+      }
+      .pagination[data-astro-cid-lvjzyg5v] a[data-astro-cid-lvjzyg5v].prev {
+        grid-template-columns: auto 1fr;
+        grid-template-areas: "arrow label" "arrow title";
+      }
+      .pagination[data-astro-cid-lvjzyg5v] a[data-astro-cid-lvjzyg5v].next {
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "label arrow" "title arrow";
+        text-align: right;
+      }
+      .pagination[data-astro-cid-lvjzyg5v]
+        a[data-astro-cid-lvjzyg5v].prev:before,
+      .pagination[data-astro-cid-lvjzyg5v]
+        a[data-astro-cid-lvjzyg5v].next:after {
+        font-size: var(--step-1);
+        color: var(--gray-10);
+        transition: color 0.2s ease-in-out;
+        font-weight: var(--font-weight-normal);
+      }
+      .pagination[data-astro-cid-lvjzyg5v]
+        a[data-astro-cid-lvjzyg5v].prev:before {
+        content: "←";
+        grid-area: arrow;
+      }
+      .pagination[data-astro-cid-lvjzyg5v]
+        a[data-astro-cid-lvjzyg5v].next:after {
+        content: "→";
+        grid-area: arrow;
+      }
+      .pagination[data-astro-cid-lvjzyg5v]
+        a[data-astro-cid-lvjzyg5v]
+        .label[data-astro-cid-lvjzyg5v] {
+        grid-area: label;
+        font-size: var(--step--1);
+        color: var(--gray-11);
+        transition: color 0.2s ease-in-out;
+        font-weight: var(--font-weight-normal);
+      }
+      .pagination[data-astro-cid-lvjzyg5v]
+        a[data-astro-cid-lvjzyg5v]
+        .title[data-astro-cid-lvjzyg5v] {
+        grid-area: title;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .pagination[data-astro-cid-lvjzyg5v] a[data-astro-cid-lvjzyg5v]:hover {
+          color: var(--gray-12);
+          border-color: var(--gray-7);
+        }
+        .pagination[data-astro-cid-lvjzyg5v]
+          a[data-astro-cid-lvjzyg5v]:hover:before,
+        .pagination[data-astro-cid-lvjzyg5v]
+          a[data-astro-cid-lvjzyg5v]:hover:after {
+          color: var(--gray-12);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="../_astro/almost.6hwQWppq.css" />
+    <style>
+      picture[data-astro-cid-s52xqo7h] {
+        image-rendering: pixelated;
+        aspect-ratio: 1.91 / 1;
+        width: 100%;
+        max-width: 1280px;
+        mix-blend-mode: multiply;
+        display: block;
+      }
+      picture[data-astro-cid-s52xqo7h] img[data-astro-cid-s52xqo7h] {
+        width: 100%;
+      }
+      .dark picture[data-astro-cid-s52xqo7h] {
+        mix-blend-mode: screen;
+      }
+      .page-header[data-astro-cid-wu5dj4rx] {
+        padding-block-end: var(--space-3xl);
+      }
+      .page-image[data-astro-cid-wu5dj4rx] {
+        background: var(--gray-5);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: var(--radius-m);
+        margin-block-start: var(--space-m);
+      }
+      .page-title[data-astro-cid-wu5dj4rx] {
+        padding-block-start: var(--space-2xl);
+        line-height: var(--line-height-display);
+      }
+      .page-subtitle[data-astro-cid-wu5dj4rx] {
+        font-size: var(--step-2);
+        line-height: var(--line-height-tight);
+        padding-block-start: var(--space-xs);
+      }
+      .date[data-astro-cid-wu5dj4rx] {
+        display: flex;
+        align-items: baseline;
+        -moz-column-gap: var(--space-2xs);
+        column-gap: var(--space-2xs);
+        margin-block-start: var(--space-m);
+        font-size: var(--step--1);
+      }
+      .icon[data-astro-cid-wu5dj4rx] {
+        align-self: center;
+      }
+      .tended[data-astro-cid-wu5dj4rx] {
+        color: var(--gray-11);
+      }
+    </style>
+    <script type="module" src="../_astro/page.CPvyyiTs.js"></script>
     <style>
       [data-astro-transition-scope="astro-mm54ysol-1"] {
         view-transition-name: astro-mm54ysol-1;
@@ -371,29 +440,22 @@
         mix-blend-mode: normal;
       }
     </style>
-
-
   </head>
-
 
   <!-- ------------------End Style ------------------ -->
   <body>
-    <script src="scripts/preloadTheme.js"></script>
-
-    <!-- header: navigation + logo -->
+    <script src="../scripts/preloadTheme.js"></script>
     <header data-astro-cid-2w66rqv5>
       <div class="center" data-astro-cid-55in74kd>
-
-        <!-- <nav> → main menu, logo (<a id="logo">), theme toggle, page links. -->
         <nav id="nav" data-astro-cid-2w66rqv5>
           <a
             id="logo"
-            href="index.html"
+            href="../index.html"
             data-fathom="logo"
             data-astro-transition-persist="logo"
             data-astro-cid-gora4mgs
           >
-            <img src="images/logo.svg" alt="Cam Nguyen Logo" style="width: 300px; height: auto;">
+            <img src="../images/logo.svg" alt="Cam Nguyen Logo" style="width: 300px; height: auto;">
               
             </img>
 
@@ -403,9 +465,11 @@
             >
           </a>
           
+          
+
           <script
             type="module"
-            src="_astro/Logo.astro_astro_type_script_index_0_lang.CMOaDQFO.js"
+            src="../_astro/Logo.astro_astro_type_script_index_0_lang.CMOaDQFO.js"
           ></script>
           <script type="module">
             function e() {
@@ -422,23 +486,18 @@
             document.addEventListener("astro:after-swap", () => e());
           </script>
 
-
-          <!-- Page Links -->
-
           <div class="links" data-astro-cid-2w66rqv5>
-            
-            
             <a
-              href="portfolio.html"
+              href="../portfolio.html"
               data-fathom="nav-link"
               class
               data-astro-cid-2w66rqv5
             >
-              Portfolio </a
-            >
-            
+              Portfolio
+            </a>
+
             <a
-              href="commission.html"
+              href="../commission.html"
               data-fathom="nav-link"
               class
               data-astro-cid-2w66rqv5
@@ -447,37 +506,31 @@
             </a>
 
             <a
-              href="pay.html"
+              href="../pay.html"
               data-fathom="nav-link"
               class
               data-astro-cid-2w66rqv5
-              
             >
               Pay
             </a>
 
             <a
-              href="links.html"
+              href="../links.html"
               data-fathom="nav-link"
               class
               data-astro-cid-2w66rqv5
             >
               Links
             </a>
-            
-            
+
             <a
-              href="about.html"
+              href="../about.html"
               data-fathom="nav-link"
               class
               data-astro-cid-2w66rqv5
             >
-              About </a
-            >
-            
-
-            
-            
+              About
+            </a>
           </div>
         </nav>
       </div>
@@ -485,70 +538,155 @@
 
     <script
       type="module"
-      src="_astro/Header.astro_astro_type_script_index_0_lang.ayUEuaA5.js"
+      src="../_astro/Header.astro_astro_type_script_index_0_lang.ayUEuaA5.js"
     ></script>
 
-
-
-    <!------------------------------------ <main> → main page content------------------------------------ -->
+    <!------------------------------------ Header End -------------------------------------->
     <main
-      class="main"
+      class="main padBottom"
       data-astro-cid-37fxchfa
       data-astro-transition-scope="astro-mm54ysol-1"
     >
-      <div class="center" data-astro-cid-55in74kd>
-        <section class="home" data-astro-cid-j7pv25f6>
-
-          <!-- edit intro-->
-          <div class="intro" data-astro-cid-j7pv25f6>
-            <p data-astro-cid-j7pv25f6>
-              <strong data-astro-cid-j7pv25f6
-                >
-                <a
-                  href="about.html"
-                  class="inline-link"
-                  data-astro-cid-j7pv25f6
-                  >Cam Nguyen</a
-                ></strong
-              >
-              is an AI artist creating custom pieces inspired by your pets.
-              <span class="nowrap" data-astro-cid-j7pv25f6
-                >
-                <a href="commission.html"
-                class="inline-link" 
-                  >Get yours!</a
-                ></span
-              >
+      <article itemscope itemtype="https://schema.org/BlogPosting">
+        <header class="page-header" data-astro-cid-wu5dj4rx>
+          <div class="center" data-astro-cid-55in74kd>
+            <h1 itemprop="name" class="page-title" data-astro-cid-wu5dj4rx>
+              Cyber Pet
+            </h1>
+            <p class="page-subtitle" data-astro-cid-wu5dj4rx>
+              Turn your pet into a sci-fi legend
             </p>
           </div>
+        </header>
+        <section itemprop="articleBody" class="prose">
+          <h2 id="portrait">
+            Concept<a aria-hidden="true" tabindex="-1"> </a>
+          </h2>
 
+          <p>
+            Inspired by Blade Runner 2049 and Ghost in the Shell, this project transports your pet into a retro-futuristic city bursting with neon lights and adventure. 
+            Whether as an intergalactic explorer or a cyber-detective, your pet will shine in a world of holograms, skyscrapers, and rain-slicked streets. 
+            Perfect for sci-fi lovers who want to see their furry friend star in an unforgettable cyberpunk journey. 
+          </p> 
+          
 
-          <!-------------- Project Grid -------------->
-          <div class="grid">
-            <a href="portfolio/project1.html" class="project">
-              <img src="images/thumb1.png" alt="Project 1">
-              <span>Being Cats Together</span>
-            </a>
-            <a href="portfolio/project2.html" class="project">
-              <img src="images/thumb2.png" alt="Project 2">
-              <span>Tails From The Moon</span>
-            </a>
-            <a href="portfolio/project3.html" class="project">
-              <img src="images/thumb3.png" alt="Project 3">
-              <span>Paw and Pixels</span>
-            </a>
-            <a href="portfolio/project4.html" class="project">
-              <img src="images/thumb4.png" alt="Project 4">
-              <span>Cyber Pet</span>
-            </a>
-          </div>
+          <h2>Examples<a aria-hidden="true" tabindex="-1"> </a></h2>
 
+          <!-- Pair 1 -->
+          <figure class="no-bleed">
+            <div class="two-up">
+              <p>
+                <img
+                  src="../project-photos/project3_1.png"
+                  alt="Example 1."
+                  width="376"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </p>
+              <p>
+                <img
+                  src="../project-photos/project3_2.png"
+                  alt="Example 2."
+                  width="376"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </p>
+            </div>
+          </figure>
 
+  
+          <!-- Pair 2 -->
+          <figure class="no-bleed">
+            <div class="two-up">
+              <p>
+                <img
+                  src="../project-photos/project3_3.png"
+                  alt="Example 3."
+                  width="376"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </p>
+              <p>
+                <img
+                  src="../project-photos/project3_4.png"
+                  alt="Example 4."
+                  width="376"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </p>
+            </div>
+          
+          </figure>
+
+          <path
+            fill-rule="evenodd"
+            fill="currentcolor"
+            d="M17.6572 14.8282L16.2429 13.414L17.6572 11.9998C19.2193 10.4377 19.2193 7.90506 17.6572 6.34296C16.0951 4.78086 13.5624 4.78086 12.0003 6.34296L10.5861 7.75717L9.17188 6.34296L10.5861 4.92875C12.9292 2.5856 16.7282 2.5856 19.0714 4.92875C21.4145 7.27189 21.4145 11.0709 19.0714 13.414L17.6572 14.8282ZM14.8287 17.6567L13.4145 19.0709C11.0714 21.414 7.27238 21.414 4.92923 19.0709C2.58609 16.7277 2.58609 12.9287 4.92923 10.5856L6.34345 9.17139L7.75766 10.5856L6.34345 11.9998C4.78135 13.5619 4.78135 16.0946 6.34345 17.6567C7.90555 19.2188 10.4382 19.2188 12.0003 17.6567L13.4145 16.2425L14.8287 17.6567ZM14.8287 7.75717L16.2429 9.17139L9.17188 16.2425L7.75766 14.8282L14.8287 7.75717Z"
+          ></path>
+
+          <!-- Pair 4 -->
+          <figure class="no-bleed">
+            <div class="two-up">
+              <p>
+                <img
+                  src="../project-photos/project3_5.png"
+                  width="376"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </p>
+              <p>
+                <img
+                  src="../project-photos/project3_6.png"
+                  width="376"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </p>
+            </div>
+          </figure>
+
+          
+
+          
+
+          <h3 id="have-fun">
+            Interested?<a aria-hidden="true" tabindex="-1"
+              ><svg
+                width="24"
+                height="24"
+                version="1.1"
+                viewBox="0 0 24 24"
+                xlmns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  fill="currentcolor"
+                  d="M17.6572 14.8282L16.2429 13.414L17.6572 11.9998C19.2193 10.4377 19.2193 7.90506 17.6572 6.34296C16.0951 4.78086 13.5624 4.78086 12.0003 6.34296L10.5861 7.75717L9.17188 6.34296L10.5861 4.92875C12.9292 2.5856 16.7282 2.5856 19.0714 4.92875C21.4145 7.27189 21.4145 11.0709 19.0714 13.414L17.6572 14.8282ZM14.8287 17.6567L13.4145 19.0709C11.0714 21.414 7.27238 21.414 4.92923 19.0709C2.58609 16.7277 2.58609 12.9287 4.92923 10.5856L6.34345 9.17139L7.75766 10.5856L6.34345 11.9998C4.78135 13.5619 4.78135 16.0946 6.34345 17.6567C7.90555 19.2188 10.4382 19.2188 12.0003 17.6567L13.4145 16.2425L14.8287 17.6567ZM14.8287 7.75717L16.2429 9.17139L9.17188 16.2425L7.75766 14.8282L14.8287 7.75717Z"
+                ></path></svg
+            ></a>
+          </h3>
+
+          <p>
+            <a href="../commission.html">Commission a piece with me!</a>
+          </p>
+
+          <hr />
         </section>
-      </div>
+      </article>
     </main>
 
-    <!-- Page footer -->
+    <!------------------------------------ Page Footer -------------------------------------->
     <footer data-astro-cid-ak3upacl>
       <div class="center" data-astro-cid-55in74kd>
         <div class="content" data-astro-cid-ak3upacl>
@@ -560,7 +698,7 @@
               data-astro-cid-ak3upacl
               >Instagram</a
             >
-          
+
             <a
               href="https://www.facebook.com/camArt/"
               target="_blank"
@@ -584,7 +722,6 @@
             >
           </div>
 
-
           <div class="links" data-astro-cid-ak3upacl>
             <a
               href="mailto:camng44@gmail.com"
@@ -601,7 +738,7 @@
               data-astro-cid-ak3upacl
               >Threadless</a
             >
-            
+
             <a
               href="https://camart.teemill.com/"
               target="_blank"
@@ -609,8 +746,6 @@
               data-astro-cid-ak3upacl
               >Teemill</a
             >
-            
-
 
             <a
               href="https://github.com/camgitblame"
@@ -628,7 +763,7 @@
               target="_blank"
               data-fathom="footer-link"
               data-astro-cid-ak3upacl
-              >Designed by Cam Nguyen 
+              >Designed by Cam Nguyen
             </a>
           </div>
           <div class="subscribe" data-astro-cid-ak3upacl>
@@ -639,8 +774,7 @@
                 display: contents;
               }
             </style>
-            
-            
+
             <script>
               (() => {
                 var a = (s, i, o) => {
@@ -864,7 +998,6 @@
               })();
             </script>
 
-
             <astro-island
               uid="LpIol"
               prefix="r7"
@@ -882,14 +1015,13 @@
                     <div>
                       <h2>Subscribe</h2>
                       <p>
-                        Sign up with your email address to receive news and updates ♥︎ 
+                        Sign up with your email address to receive news and
+                        updates ♥︎
                       </p>
                     </div>
                   </div>
                   <div class="dialogueContainer">
-                    
-                    <div class="stamp"  onclick="changeImage()"  >
-                      
+                    <div class="stamp" onclick="changeImage()">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 -0.5 48 48"
@@ -899,17 +1031,15 @@
                         width="48"
                         height="48"
                       >
-
-                        <image id="stampInnerImage"
-                        href="images/girl3.png"
-                        x="0"
-                        y="0"
-                        width="48"
-                        height="48"
-                        preserveAspectRatio="xMidYMid slice"
-                      />
-                    
-                        </svg
+                        <image
+                          id="stampInnerImage"
+                          href="../images/girl3.png"
+                          x="0"
+                          y="0"
+                          width="48"
+                          height="48"
+                          preserveAspectRatio="xMidYMid slice"
+                        /></svg
                       ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="109"
@@ -925,19 +1055,23 @@
                     </div>
 
                     <script>
-                      const images = ['images/girl3.png', 'images/girl3_2.png', 'images/girl3_3.png'];
+                      const images = [
+                        "../images/girl3.png",
+                        "../images/girl3_2.png",
+                        "../images/girl3_3.png",
+                      ];
                       let currentIndex = 0;
 
                       function changeImage() {
                         currentIndex = (currentIndex + 1) % images.length;
-                        document.getElementById('stampInnerImage').setAttribute('href', images[currentIndex]);
+                        document
+                          .getElementById("stampInnerImage")
+                          .setAttribute("href", images[currentIndex]);
                       }
                     </script>
-
-
                   </div>
                 </div>
-                
+
                 <!-- # Subscribe Form -->
                 <form>
                   <div class="inputWrapper" aria-disabled="false">
@@ -1015,9 +1149,8 @@
       <!--astro:end--></astro-island
     >
   </body>
-
-
 </html>
+
 <script
   type="module"
   src="_astro/index.astro_astro_type_script_index_0_lang.Dw8BcZ08.js"
