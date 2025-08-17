@@ -22,3 +22,4 @@ yarn-error.log*
 
 # Optional: Netlify build cache (if you ever use it locally)
 .netlify/
+.DS_Store
