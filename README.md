@@ -1,12 +1,12 @@
 # camArt
 
-Personal art portfolio website.
+Cam Nguyen's personal art portfolio website.
 
 ## Tech Stack
 
 - **HTML5**: Static pages for portfolio, about, commission, links, and more.
 - **CSS**: Custom stylesheets and Astro-generated CSS for layout and design.
-- **JavaScript**: Used for theme preloading and interactive features (`scripts/preloadTheme.js`).
+- **JavaScript**: For theme preloading and interactive features (`scripts/preloadTheme.js`).
 
 ## Structure
 
