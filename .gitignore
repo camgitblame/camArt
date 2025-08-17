@@ -3,6 +3,7 @@ node_modules/
 
 # Astro build output
 dist/
+_astro/
 
 # Local environment files
 .env
